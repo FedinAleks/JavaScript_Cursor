@@ -37,16 +37,8 @@ console.log(`total sum`, sum)
 console.log(`random discount`,discoundPercentage)
 console.log(`sum with discount`, finalSum)
 
-function calculateNetProfit (priceWithDiscount, sum) {
-    const sumPrice = (sum / 2 - sum * discoundPercentage) 
-    return priceWithDiscount - sumPrice
-}
-const payWithDiscount = 80
-const price = 100
-const Profit = calculateNetProfit (payWithDiscount, price)
-console.log(`payment with discount`, payWithDiscount)
-console.log(`firstly price`, price / 2)
-console.log(`Clear profit`,Profit)
+const Profit = Math.floor(sum / 2 - ((sum / 100) * discoundPercentage))
+console.log(`Clear profit`, Profit)
 
 document.write (
     `Максимальна ціна: ${maxPrice} <br>
