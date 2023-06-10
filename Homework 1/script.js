@@ -1,49 +1,49 @@
-let orange = 15.678
-let banana = 123.965
-let lemon = 90.2345
+const orange = 15.678
+const banana = 123.965
+const lemon = 90.2345
 
-let maxPrice = Math.max (orange, banana, lemon)
+const maxPrice = Math.max (orange, banana, lemon)
 console.log(`max price`, maxPrice)
 
-let minPrice = Math.min (orange, banana, lemon)
+const minPrice = Math.min (orange, banana, lemon)
 console.log(`min price`, minPrice)
 
-let sum = orange + banana + lemon
+const sum = orange + banana + lemon
 console.log(`total sum`, sum)
 
-let sumToFloor = Math.floor(orange) + Math.floor(banana) + Math.floor(lemon)
+const sumToFloor = Math.floor(orange) + Math.floor(banana) + Math.floor(lemon)
 console.log(`sum without a penny`, sumToFloor)
 
-let sumToHundred = Math.round(sum / 100) * 100
+const sumToHundred = Math.round(sum / 100) * 100
 console.log(`sum rounded to hundred`, sumToHundred)
 
-let checkNumber = Math.floor(sum) % 2 === 0
+const checkNumber = Math.floor(sum) % 2 === 0
 console.log(`even or odd`, checkNumber)
 
-let change = 500 - sum
+const change = 500 - sum
 console.log(`change`, change)
 
-let calculateAverage = (sum / 3) .toFixed(2)
+const calculateAverage = (sum / 3).toFixed(2)
 console.log(`average`, calculateAverage)
 
 function applyDiscount(sum,discoundPercentage) {
-    let discountSum = sum * (discoundPercentage / 100)
-    let discountedSum = sum - discountSum
+    const discountSum = sum * (discoundPercentage / 100)
+    const discountedSum = sum - discountSum
     return discountedSum
 }
-let discoundPercentage = (Math.random() * 80).toFixed(2)
-let finalSum = applyDiscount (sum, discoundPercentage).toFixed(2)
+const discoundPercentage = (Math.random() * 80).toFixed(2)
+const finalSum = applyDiscount (sum, discoundPercentage).toFixed(2)
 console.log(`total sum`, sum)
-console.log(`ramdom discount`,discoundPercentage)
+console.log(`random discount`,discoundPercentage)
 console.log(`sum with discount`, finalSum)
 
 function calculateNetProfit (priceWithDiscount, sum) {
-    let sumPrice = sum / 2
+    const sumPrice = (sum / 2 - sum * discoundPercentage) 
     return priceWithDiscount - sumPrice
 }
-let payWithDiscount = 80
-let price = 100
-let Profit = calculateNetProfit (payWithDiscount, price)
+const payWithDiscount = 80
+const price = 100
+const Profit = calculateNetProfit (payWithDiscount, price)
 console.log(`payment with discount`, payWithDiscount)
 console.log(`firstly price`, price / 2)
 console.log(`Clear profit`,Profit)
@@ -58,6 +58,6 @@ document.write (
     Решта: ${change} <br>
     Середнє значення цін: ${calculateAverage} <br>
     Знижка: ${discoundPercentage} % <br>
-    Ціна зі знижкою: ${payWithDiscount} <br>
+    Ціна зі знижкою: ${finalSum} <br>
     Чистий прибуток: ${Profit}`
 )
