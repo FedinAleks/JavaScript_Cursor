@@ -1,32 +1,14 @@
-const N = prompt("Введіть значення N:")
-
-const numberN = parseFloat(N)
-
-if (!isNaN(numberN)) {
-    if (Number.isInteger(numberN)) {
-    console.log(`Ви ввели вірне число N:`, numberN)
-    }   else {
-    console.log(`Ви ввели число, але не ціле`, numberN)
-    } 
-}   else {
-    console.log(`Введене не число N`, numberN)
+do { numberN = Number(prompt("Введіть значення N:"))
+    console.log(`Число N:`, numberN)
 }
+while (isNaN(numberN) || !Number.isInteger(numberN))
 
-const M = prompt("Введіть значення M:")
-
-const numberM = parseFloat(M)
-
-if (!isNaN(numberM)) {
-    if (Number.isInteger(numberM)) {
-    console.log(`Ви ввели вірне число M:`, numberM)
-    }   else {
-    console.log(`Ви ввели число, але не ціле`, numberM)
-    } 
-}   else {
-    console.log(`Введене не число M`, numberM)
+do { numberM = Number(prompt("Введіть значення M:"))
+    console.log(`Число M:`, numberN)
 }
+while (isNaN(numberM) || !Number.isInteger(numberM))
 
-const skipNumbers = confirm(`Чи потрібно пропускати парні числа?`)
+let skipNumbers = confirm(`Пропускати парні числа?`)
 
 let sum = 0
 
