@@ -1,23 +1,31 @@
-do { numberN = Number(prompt("Введіть значення N:"))
+let numberN = null
+let numberM = null
+
+do { numberN = Number(prompt("Введіть значення N:","Введіть ціле число"))
     console.log(`Число N:`, numberN)
 }
-while (isNaN(numberN) || !Number.isInteger(numberN))
+while (isNaN(numberN) || !Number.isInteger(numberN) || !numberN) /*{
+    numberN = Number(prompt("Введене не правильне число. Спробуйте ще"))
 
-do { numberM = Number(prompt("Введіть значення M:"))
+    Привіт! В мене питання - Що я роблю не так? 
+    Я хочу, щоб після некоректного вводу, зʼявлялось вікно - "спробуй ще"
+    і воно повторювалось поки користувач не введе вірне число
+
+}*/
+
+do { numberM = Number(prompt("Введіть значення M:","Введіть ціле число"))
     console.log(`Число M:`, numberN)
 }
-while (isNaN(numberM) || !Number.isInteger(numberM))
+while (isNaN(numberM) || !Number.isInteger(numberM) || !numberM)
 
-let skipNumbers = confirm(`Пропускати парні числа?`)
+const skipNumbers = confirm(`Пропускати парні числа?`)
 
 let sum = 0
 
 for (let i = numberN; i <= numberM; i++) {
-    if (skipNumbers) {
-        if (i % 2 === 0) {
+    if (skipNumbers && i % 2 == 0) {
             continue
         }
-    }
     sum += i
 }
 
