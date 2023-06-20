@@ -39,6 +39,7 @@ function PowerResult() {
     }
     const result = power(base, exponent)
     alert(`${base} в ступені ${exponent} дорівнює ${result}`)
+    console.log(`Cтупінь дорівнює:`, result)
 }
 PowerResult() 
 
@@ -104,4 +105,5 @@ function convertCurrency (amount) {
 const amount = prompt(`Please write amount (important in $ or UAH!)`)
 const convertedAmount = convertCurrency(amount)
 console.log(convertedAmount)
+
 
