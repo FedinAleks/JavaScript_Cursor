@@ -82,7 +82,7 @@ function getRandomNumber(N, M) {
     const N = parseInt(prompt(`Напишіть нижній діапазон`))
     const M = parseInt(prompt(`Напишіть верхній діапазон`))
     const randomNum = getRandomNumber(N, M)
-    console.log(randomNum)
+    console.log(`Випадкове число`, randomNum)
 
 /* Function 7. Створіть функцію, яка конвертує долари в гривні та навпаки в
 залежності від наявності символа $ або UAH в рядку. */
