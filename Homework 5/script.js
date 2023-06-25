@@ -82,7 +82,7 @@ function divideByThree(word) {
         emptyMassive.push(massive)
         i += 3
         }
-    return emptyMassive.join(" ")
+    return emptyMassive
 }
 const result = divideByThree("Commander")
 console.log(result)
