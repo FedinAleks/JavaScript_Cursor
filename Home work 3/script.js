@@ -21,27 +21,31 @@ findMaxNumber()
 
 /* Function 2 (Функція, яка визначає ступінь числа.)*/
 
-function power (base, exponent) {
+function calculatePower () {
+    const baseInput = parseFloat(prompt(`Введіть число, для визначення ступеня`))
+    const exponentInput = parseInt(prompt(`Введіть ступінь числа`))
+
+    const base = parseFloat(baseInput)
+    const exponent = parseInt(exponentInput)
+
+    if (isNaN(base) || isNaN(exponent)) {
+        return `Введіть корректні дані`
+    }
+
     let result = 1
 
-    for (i = 0; i < exponent; i++) {
-        result *= base
+    if (exponent >= 0) {
+        for (let i = 0; i < exponent; i++) {
+            result *= base
+        }
+    } else {
+        for (let i = 0; i > exponent; i--){
+        result /= base
+        }
     }
     return result
 }
-function PowerResult() {
-    const base = parseFloat(prompt(`Введіть число:`))
-    const exponent = parseInt(prompt(`Введіть ступінь числа`))
-
-    if (isNaN(base) || isNaN(exponent)) {
-        alert (`Введіть корректні дані`)
-        return
-    }
-    const result = power(base, exponent)
-    alert(`${base} в ступені ${exponent} дорівнює ${result}`)
-    console.log(`Cтупінь дорівнює:`, result)
-}
-PowerResult() 
+console.log(`Cтупінь дорівнює:`, calculatePower())
 
 /* Function 3 (Correct name)*/
 
@@ -82,28 +86,31 @@ function getRandomNumber(N, M) {
     const N = parseInt(prompt(`Напишіть нижній діапазон`))
     const M = parseInt(prompt(`Напишіть верхній діапазон`))
     const randomNum = getRandomNumber(N, M)
-    console.log(`Випадкове число`, randomNum)
+    console.log(`Випадкове число`, randomNum) 
 
 /* Function 7. Створіть функцію, яка конвертує долари в гривні та навпаки в
 залежності від наявності символа $ або UAH в рядку. */
 
 function convertCurrency (amount) {
-    const dollarToUAH = 38
+    const usdTouahRate = 38
+    const uahTousdRate = 1 / usdTouahRate
 
-    if (amount.indexOf(`$`) !== -1) {
-        const dollars = parseFloat(amount.replace(`$`, ``))
-        const uah = dollars * dollarToUAH
-        return uah.toFixed(2) + `UAH`
-    } else if (amount.indexOf(`UAH`) !== -1) {
-        const uah = parseFloat(amount.replace(`UAH`, ``))
-        const dollars = uah / dollarToUAH
-        return dollars.toFixed(2) + `$`
+    const input = prompt(`Введіть суму та валюту (наприклад 100$ або 100UAH)`)
+    if (!input) {
+        return `Введіть рядок, що містить суму та валюту`
+    }
+    const upperCaseAmount = input.toUpperCase()
+
+    if (upperCaseAmount.includes(`$`)) {
+        const dollars = parseFloat(upperCaseAmount.replace(/\D/g, ``))
+        const uah = dollars * usdTouahRate
+        return `UAH ${uah.toFixed(2)}`
+    }   else if (upperCaseAmount.includes(`UAH`)) {
+        const uah = parseFloat(upperCaseAmount.replace(/\D/g, ``))
+        const dollars = uah * uahTousdRate
+        return `$${dollars.toFixed(2)}`
     } else {
-        return `Невірний формат значення.`
+        return `Введіть число з символом $ або UAH для розрахунку`
     }
 }
-const amount = prompt(`Please write amount (important in $ or UAH!)`)
-const convertedAmount = convertCurrency(amount)
-console.log(convertedAmount)
-
-
+console.log(convertCurrency())
