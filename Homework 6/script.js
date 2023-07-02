@@ -40,9 +40,7 @@ function getSubjects(student) {
     });
     return formatedSubjects
 }
-const student = students[0];
-const subjectList = getSubjects(student);
-console.log(`Функція №1- getSubjects`, subjectList)
+console.log(`Функція №1- getSubjects`, getSubjects(students[0]))
 
     /*Створіть функцію getAverageMark(students[0]) --> 3.79 – яка поверне
     середню оцінку по усім предметам для переданого студента НЕ МАСИВА
@@ -74,7 +72,7 @@ function getStudentInfo(students) {
     return info;   
     }
     
-    console.log('Функція №3 - getStudentInfo', getStudentInfo(students[0]));
+console.log('Функція №3 - getStudentInfo', getStudentInfo(students[0]));
 
     /*4.Ствроіть функцію getStudentsNames(students) --> ["Anton", "Tanya, "Victor"]
     – яка повертає імена студентів у алфавітному порядку.*/
@@ -102,7 +100,7 @@ function getBestStudent(student) {
     }
     return bestStudent;
 }
-console.log(`Функція №5 - getBestStudent`, getBestStudent(student))
+console.log(`Функція №5 - getBestStudent`, getBestStudent(students))
 
     /*Створіть функцію calculateWordLetters("тест") --> { "т": 2, "е": 1, "с": 1 } 
     – яка повертає обє'кт, в якому ключі це букви у слові, а значення – кількість їх
