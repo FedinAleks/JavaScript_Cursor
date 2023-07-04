@@ -56,8 +56,8 @@ function getMySalary(country) {
         const taxes = country.tax * salary;
         const profit = salary - taxes;
 
-        console.log({salary, taxes, profit}), 10000;
-    });
+        console.log({salary, taxes, profit});
+    }, 10000);
 }
 getMySalary(ukraine);
 //getMySalary(latvia);
