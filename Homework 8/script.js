@@ -44,7 +44,7 @@ console.log(`Інформація:`,student1.getInfo());
 
 // Task 3:
 this.marks = [5, 4, 4, 5];
-console.log('Оцінки студента ', this.marks);
+console.log('Оцінки студента ', student1.marks);
 
 // Task 4:
 student1.mark = 5;
@@ -59,7 +59,7 @@ console.log(`Виключення студента`, student1.mark);
 
 // Task 7:
 student1.recover();
-console.log('Оцінки студента після відновлення', this.marks);
+console.log('Оцінки студента після відновлення', student1.marks);
 
 // ADVANCED
 console.log(`ADVANCED`);
