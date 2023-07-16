@@ -5,6 +5,7 @@ class Student {
         this.fullName = fullName;
         this.marks = [5, 4, 4, 5];
         this.dismissed = false;
+        this.dismissedMarks = null
     }
 
     getInfo() {
@@ -30,11 +31,14 @@ class Student {
 
     dismiss() {
         this.isDismissed = true;
+        this.dismissedMarks = this.marks
         this.marks = null;
     }
 
     recover () {
         this.isDismissed = false;
+        this.marks = this.dismissedMarks;
+        this.dismissedMarks = null;
         console.log(`Поновлюємо студента`)
     }
 }
