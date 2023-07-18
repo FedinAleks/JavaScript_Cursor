@@ -9,7 +9,7 @@ function playSound (e) {
     if (lastPlayedAudio) {
         lastPlayedAudio.pause();
         lastPlayedAudio.currentTime = 0;
-        lastPlayedAudio.classList.remove(`active`);
+        lastPlayedAudio.classList.remove(`playing`);
     };
     audio.currentTime = 0;
     audio.play();
@@ -24,7 +24,13 @@ function removeTransition(e) {
 }
 
 const keys = document.querySelectorAll(`.key`);
-keys.forEach(key => key.addEventListener(`transitionend`, removeTransition))
+keys.forEach(key => {
+    key.addEventListener(`transitionend`, removeTransition);
+    key.addEventListener(`click`, function(e) {
+        const keyCode = parseInt(e.target.dataset.key);
+        playSound({keyCode});
+    });
+});
 window.addEventListener(`keydown`, playSound);
 
 //Кнопка зупинки звуку
