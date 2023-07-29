@@ -129,7 +129,7 @@ body {
     width: 250px;
     height: 10px;
     background-color: #00ff00; /* Зелений колір меча */
-    position: absolute;
+    position: fixed;
     margin-top: -250px;
     margin-left: 330px;
     border-radius: 15px;
