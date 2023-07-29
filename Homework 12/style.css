@@ -1,0 +1,127 @@
+body {
+    background-image: url(./image/maria-ten-b7Hr2YK-FuI-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Oswald';
+    color: white;
+    position: absolute;
+    background-color: black;
+}
+.wrapper {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.main_text {
+    font-size: 150px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+
+}
+.starwars2 {
+    margin-left: 25%;
+    margin-top: -11%;
+}
+.secondary_text {
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    margin-left: 22%;
+}
+.press {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.input_div {
+    display: flex;
+    align-items: center;
+}
+.button {
+    margin-top: 5%;
+    background-color: #0017e5;
+    color: #ffffff;
+    border: 6px solid #0017e5;
+    border-radius:15px;
+    font-size: 18px;
+    letter-spacing:5px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 15px #0017e5) drop-shadow(0 0 50px #0017e5) contrast(2) brightness(2);
+    transition: 0s;
+}
+  
+.button:hover {
+    color: rgb(255, 255, 255);
+    background-color: #fc0000;
+    filter: drop-shadow(0 0 20px #fc0000) contrast(2) brightness(2);
+    border-color: #fc0000;
+}
+.button_nav_1 {
+    position: fixed;
+    top: 40px;
+    right: 200px;
+    background-color: #dbc500;
+    color: #000000;
+    border: 6px solid #dbc500;
+    border-radius:15px;
+    font-size: 18px;
+    letter-spacing:5px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 15px #dbc500) drop-shadow(0 0 50px #dbc500) contrast(2) brightness(2);
+    transition: 0s;
+}
+.button_nav_2 {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    background-color: #dbc500;
+    color: #000000;
+    border: 6px solid #dbc500;
+    border-radius:15px;
+    font-size: 18px;
+    letter-spacing:5px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 15px #dbc500) drop-shadow(0 0 50px #dbc500) contrast(2) brightness(2);
+    transition: 0s;
+}
+.button_nav_1:hover {
+    color: rgb(255, 255, 255);
+    background-color: #27a700;
+    filter: drop-shadow(0 0 20px #27a700) contrast(2) brightness(2);
+    border-color: #27a700;
+}
+.button_nav_2:hover {
+    color: rgb(255, 255, 255);
+    background-color: #27a700;
+    filter: drop-shadow(0 0 20px #27a700) contrast(2) brightness(2);
+    border-color: #27a700;
+}
+#charactersContainer {
+    margin-top: 20px;
+}
+#planetsContainer {
+    margin-top: 20px;
+}
+.div_info_film {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.div_info_character {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.div_info_planets {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
