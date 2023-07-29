@@ -125,3 +125,31 @@ body {
     justify-content: center;
     align-items: center;
 }
+.lightsaber {
+    width: 250px;
+    height: 10px;
+    background-color: #00ff00; /* Зелений колір меча */
+    position: absolute;
+    margin-top: -250px;
+    margin-left: 330px;
+    border-radius: 15px;
+    animation: flicker 0.5s infinite alternate;
+  }
+
+  @keyframes flicker {
+    0% {
+        filter: drop-shadow(0 0 30px #27a700) contrast(3) brightness(3);
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    50% {
+        filter: drop-shadow(0 0 30px #27a700) contrast(4) brightness(4);
+        opacity: 0.6;
+        transform: scaleY(1);
+    }
+    100% {
+        filter: drop-shadow(0 0 30px #27a700) contrast(1) brightness(1);
+        opacity: 1;
+        transform: scaleY(1);
+    }
+  }
