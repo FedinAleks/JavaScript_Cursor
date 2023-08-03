@@ -95,6 +95,11 @@ function extractCharacterId(url) {
 
 function getFilmInformation() {
     const filmNumber = document.getElementById("filmNumber").value;
+
+    if (filmNumber === `` || isNaN(filmNumber) || filmNumber < 1 || filmNumber > 6) {
+        alert(`You have to select 1-6 episod`);
+        return;
+    }
     const apiUrl = `https://swapi.dev/api/films/${filmNumber}/`;
 
     fetch(apiUrl)
