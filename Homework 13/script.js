@@ -45,11 +45,10 @@ function* newFontGenerator(initialSize) {
       fontSize += 2;
     } else if (change === "down") {
       fontSize -= 2;
-    } else if (change === "reset") { // Обробник скидання розміру
+    } else if (change === "reset") { 
       fontSize = defaultSize;
     }
 
-    // Зміна розміру шрифту елемента з id="text"
     document.getElementById("text").style.fontSize = `${fontSize}px`;
     document.getElementById("currentSize").innerText = `Current Size: ${fontSize}px`;
   }
@@ -57,12 +56,10 @@ function* newFontGenerator(initialSize) {
 
 const fontGenerator = newFontGenerator(14);
 
-// Обробник натискання кнопки "Up"
 document.getElementById("upButton").addEventListener("click", () => {
   fontGenerator.next("up");
 });
 
-// Обробник натискання кнопки "Down"
 document.getElementById("downButton").addEventListener("click", () => {
   fontGenerator.next("down");
 });
